@@ -1,0 +1,6 @@
+/.bundle/
+/vendor/gems/
+/Gemfile.lock
+/puppet-lint-file_owner_mode-check-*.gem
+.idea/
+/coverage/
