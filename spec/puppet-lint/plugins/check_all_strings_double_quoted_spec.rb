@@ -63,6 +63,7 @@ describe 'all_strings_double_quoted' do
         expect(problems).to have(0).problem
       end
     end
+
   end
 
   context 'with fix enabled' do
