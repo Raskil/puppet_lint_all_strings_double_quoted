@@ -49,6 +49,20 @@ describe 'all_strings_double_quoted' do
         expect(problems).to have(0).problem
       end
     end
+
+    context 'singe quoted string with a lot of non escaping dollar signs' do
+      let(:code) { "$test = 'ok: $ $% $$'" }
+      it 'should only detect a single problem' do
+        expect(problems).to have(1).problem
+      end
+    end
+
+    context 'singe quoted string with a lot of non escaping dollar signs and one escaping' do
+      let(:code) { "$test = 'ok: $2 $ $% $$'" }
+      it 'should not detect any problems' do
+        expect(problems).to have(0).problem
+      end
+    end
   end
 
   context 'with fix enabled' do
