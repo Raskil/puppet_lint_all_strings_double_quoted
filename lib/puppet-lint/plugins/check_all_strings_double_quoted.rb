@@ -1,5 +1,5 @@
 PuppetLint.new_check(:all_strings_double_quoted) do
-  ESCAPE_CHAR_RE = %r{\$[a-zA-Z0-9]|\$\{.*\}|\\|"}
+  ESCAPE_CHAR_RE = %r{\$[a-z0-9]|\$\{.*\}|\\|"}
 
   def check
     tokens.select { |token|
